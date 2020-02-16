@@ -48,7 +48,9 @@ def buildrank(type):
 
 option = Options()
 option.headless = True
-driver = webdriver.Firefox(options=option)
+
+# No ubuntu instalar o geckodriver e pegar o caminho dele
+driver = webdriver.Firefox(options=option, executable_path = '/usr/bin/geckodriver')
 
 driver.get(url)
 driver.implicitly_wait(10)  # in seconds
